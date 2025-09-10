@@ -30,7 +30,7 @@ public class FilesHandler {
         try {
             result.append(Files.readString(Paths.get(filName)));
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new MyException("Ошибка ввода вывода " + e.getMessage());
         }
         return result.toString();
     }
